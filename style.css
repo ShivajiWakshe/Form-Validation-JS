@@ -1,0 +1,140 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
+}
+
+/* FULL SCREEN BACKGROUND */
+body{
+  min-height:100vh;
+  background:url("bg.jpg") no-repeat center center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* DARK OVERLAY */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+
+/* GLASS CONTAINER */
+.container{
+  position:relative;
+  width:360px;
+  padding:30px;
+  border-radius:18px;
+  background:rgba(255, 255, 255, 0.15);
+  backdrop-filter:blur(18px);
+  box-shadow:0 0 30px cyan;
+  color:white;
+  animation:fade 1s ease;
+}
+
+/* TOGGLE */
+.toggle{
+  display:flex;
+  margin-bottom:20px;
+}
+
+.toggle button{
+  flex:1;
+  padding:10px;
+  border:none;
+  background:transparent;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  border-bottom:2px solid transparent;
+}
+
+.toggle .active{
+  border-color:cyan;
+  box-shadow:0 3px 10px cyan;
+}
+
+/* FORMS */
+form{
+  display:none;
+}
+form.active{
+  display:block;
+}
+
+/* INPUTS */
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+  outline:none;
+}
+
+input:focus{
+  box-shadow:0 0 10px cyan;
+}
+
+/* PASSWORD EYE */
+.password-box{
+  position:relative;
+}
+
+.password-box span{
+  position:absolute;
+  right:10px;
+  top:14px;
+  cursor:pointer;
+}
+
+/* REMEMBER */
+.remember{
+  font-size:14px;
+}
+
+/* BUTTON */
+.submit{
+  width:100%;
+  padding:12px;
+  margin-top:15px;
+  background:cyan;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 0 15px cyan;
+}
+
+.submit:hover{
+  transform:scale(1.05);
+}
+
+/* MESSAGE */
+.msg{
+  margin-top:10px;
+  text-align:center;
+  font-size:14px;
+}
+
+/* ANIMATION */
+@keyframes fade{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+
+.remember {
+  color: white;
+  font-size: 14px;
+}
+
+.forgot {
+  color: cyan;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}

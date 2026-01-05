@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="container">
+    <div class="toggle">
+      <button id="loginBtn" class="active">Login</button>
+      <button id="registerBtn">Register</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" class="active">
+      <input type="email" id="loginEmail" placeholder="Email">
+      <div class="password-box">
+        <input type="password" id="loginPass" placeholder="Password">
+        <span onclick="togglePassword('loginPass')">👁</span>
+      </div>
+
+      <label class="remember">
+        <input type="checkbox" id="remember"> Remember Me
+      </label>
+
+      <button type="button" class="submit" onclick="login()">Login</button>
+      <p class="msg" id="loginMsg"></p>
+    </form>
+
+    <!-- REGISTER FORM -->
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Full Name">
+      <input type="email" id="regEmail" placeholder="Email">
+
+      <div class="password-box">
+        <input type="password" id="regPass" placeholder="Password (min 6)">
+        <span onclick="togglePassword('regPass')">👁</span>
+      </div>
+
+      <button type="button" class="submit" onclick="register()">Register</button>
+      <p class="msg" id="regMsg"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
